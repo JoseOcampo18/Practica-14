@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+</head>
+<body>
+    <h1>Person: <%= ID %></h1>
+
+    <% switch (message) { <!--Comparamos el valor que mandamos en message, y hacemos una comparación con un switch-->
+        case 'Bienvenido' : %>
+        <h2>Mensaje: <%= message %></h2>
+        <% for(let i = 1; i <= times; i++) { %> <!--Ciclo para imprimir el mensaje el numero de veces indicado por "times"-->
+            <li><%= message %> <%= ID %></li> <!--Armamos la oración completa-->
+        <% } %>
+                <% break;
+        
+        case 'Hola' : %>
+        <h2>Mensaje: <%= message %></h2>
+        <% for(let i = 1; i <= times; i++) { %> <!--Ciclo para imprimir el mensaje el numero de veces indicado por "times"-->
+            <li><%= message %> <%= ID %></li> <!--Armamos la oración completa-->
+        <% } %>
+                <% break;
+        
+        case 'Adios' : %>
+        <h2>Mensaje: <%= message %></h2>
+        <% for(let i = 1; i <= times; i++) { %> <!--Ciclo para imprimir el mensaje el numero de veces indicado por "times"-->
+            <li><%= message %> <%= ID %></li> <!--Armamos la oración completa-->
+        <% } %>
+                <% break;
+        default: %>
+        <h2><%= ID %> el mensaje <%= message %> no existe. </br>
+            Solo tenemos 3 saludos: Hola, Bienvenido y Adios</h2> <!--Si el mensaje no es uno de los establecidos en los casos anteriores, indicamos que no se puede imprimir-->
+                <% break;
+        } %>
+
+</body>
+</html>
